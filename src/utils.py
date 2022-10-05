@@ -1,7 +1,7 @@
 import csv
 import scipy
 import os.path
-import scipy.io
+import scipy.io.arff
 import numpy as np
 import pandas as pd
 from sklearn.svm import SVC
@@ -27,7 +27,7 @@ corpus_4_microbiomicdata = ['FS', 'CBH', 'CS', 'CSS', 'FSH']
 
 
 dataset_fields = ['DatasetName', 'NumOfSamples', 'OriginalNumOfFeatures']
-experiment_fields = ['FilteringAlgorithm', 'LearningAlgorithm', 'NumFeaturesSelected(K)', 'CVMethod', 'Fold']
+experiment_fields = ['FilteringAlgorithm', 'LearningAlgorithm', 'NumFeaturesSelected(K)', 'CVMethod', 'Folds']
 prediction_fields = ['MeasureType', 'MeasureVal', 'ListOfFeaturesNames', 'ListOfFeaturesScores', 'FeatureSelectionTime', 'FitTime', 'InferenceTime']
 fields = dataset_fields + experiment_fields + prediction_fields
 
